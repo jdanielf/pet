@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Pet</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/">← Voltar para Home</a>
+        <h1 id="nomePetTitulo">Carregando Pet...</h1>
+
+        <section class="form-section">
+            <h2>Adicionar Registro de Vacina</h2>
+            <form id="formVacina">
+                <input type="text" id="nomeVacina" placeholder="Nome da Vacina (ex: V10)" required>
+                <label>Data Aplicada:</label>
+                <input type="date" id="dataAplicada" required>
+                <label>Próxima Dose:</label>
+                <input type="date" id="proximaDose" required>
+                <input type="number" id="antecedencia" placeholder="Avisar quantos dias antes?" value="5">
+                <button type="submit">Adicionar Vacina</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Histórico de Vacinas & Alertas</h2>
+            <div id="listaVacinas"></div>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+        <section class="form-section">
+            <h2>Adicionar Registro de Banho e Tosa</h2>
+            <form id="formServico">
+                <label>Tipo de Serviço:</label>
+                <select id="tipoServico" required>
+                    <option value="Banho e Tosa">Banho e Tosa (Ambos)</option>
+                    <option value="Somente Banho">Somente Banho</option>
+                    <option value="Somente Tosa">Somente Tosa</option>
+                </select>
+                
+                <label>Data do Serviço:</label>
+                <input type="date" id="dataServico" required>
+                
+                <div style="display: flex; gap: 10px;">
+                    <div style="flex: 1;">
+                        <label>Horário de Chegada:</label>
+                        <input type="time" id="horarioChegada">
+                    </div>
+                    <div style="flex: 1;">
+                        <label>Horário de Saída:</label>
+                        <input type="time" id="horarioSaida">
+                    </div>
+                </div>
+
+                <input type="text" id="localServico" placeholder="Nome do Pet Shop / Estabelecimento" required>
+                <input type="text" id="contatoLocal" placeholder="Contato / Telefone do Local">
+                
+                <button type="submit" style="background-color: #2ecc71;">Salvar Serviço</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Histórico de Banho e Tosa</h2>
+            <div id="listaServicos"></div>
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

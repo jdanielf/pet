@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Carteira do Pet</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐾 Minha Carteira Pet</h1>
+        
+        <section class="form-section">
+            <h2>Cadastrar Novo Pet</h2>
+            <form id="formPet">
+                <input type="text" id="nome" placeholder="Nome do Pet" required>
+                <select id="especie">
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
+                </select>
+                <input type="text" id="raca" placeholder="Raça">
+                <input type="date" id="data_nascimento">
+                <input type="text" id="endereco" placeholder="Endereço">
+                <button type="submit">Salvar Pet</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Meus Pets</h2>
+            <div id="listaPets" class="grid-pets"></div>
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
